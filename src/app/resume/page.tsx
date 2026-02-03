@@ -54,7 +54,7 @@ export default function ResumePage() {
                 Data
               </h3>
               <p className="text-lg text-zinc-700 dark:text-zinc-300">
-                SQL Server, PostgreSQL, ORM tools
+                SQL Server, ORM tools (Hibernate, Sequelize), MongoDB, Azure Cosmos DB
               </p>
             </div>
 
@@ -72,7 +72,7 @@ export default function ResumePage() {
                 Testing & Quality
               </h3>
               <p className="text-lg text-zinc-700 dark:text-zinc-300">
-                Jest, Playwright, unit/integration testing
+                Jest, Playwright, Unit/Integration testing
               </p>
             </div>
           </div>
@@ -89,9 +89,9 @@ export default function ResumePage() {
             <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2">
               <div>
                 <h3 className="text-xl font-semibold">Senior Full-Stack Developer</h3>
-                <p className="text-lg text-zinc-600 dark:text-zinc-400">Company Name</p>
+                <p className="text-lg text-zinc-600 dark:text-zinc-400">BlueCross BlueShield Tennessee</p>
               </div>
-              <p className="text-lg text-zinc-600 dark:text-zinc-400">2022 - Present</p>
+              <p className="text-lg text-zinc-600 dark:text-zinc-400">2020 - Present</p>
             </div>
             <ul className="list-disc list-inside space-y-2 text-lg text-zinc-700 dark:text-zinc-300 ml-4">
               <li>
@@ -173,10 +173,11 @@ export default function ResumePage() {
           <div className="space-y-3">
             <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2">
               <div>
-                <h3 className="text-xl font-semibold">Bachelor of Science in Computer Science</h3>
-                <p className="text-lg text-zinc-600 dark:text-zinc-400">University Name</p>
+                <h3 className="text-xl font-semibold">Bachelor's in Game Development
+                </h3>
+                <p className="text-lg text-zinc-600 dark:text-zinc-400">Art Institute of Atlanta</p>
               </div>
-              <p className="text-lg text-zinc-600 dark:text-zinc-400">2017</p>
+              <p className="text-lg text-zinc-600 dark:text-zinc-400">2009</p>
             </div>
           </div>
         </section>
