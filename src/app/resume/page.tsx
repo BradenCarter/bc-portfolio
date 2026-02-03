@@ -79,12 +79,12 @@ export default function ResumePage() {
         </section>
 
         {/* Professional Experience */}
-        <section className="space-y-8">
+        
+        {/* <section className="space-y-8">
           <h2 className="text-3xl font-semibold border-b-2 border-zinc-200 dark:border-zinc-800 pb-2">
             Professional Experience
           </h2>
 
-          {/* Job 1 */}
           <div className="space-y-3">
             <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2">
               <div>
@@ -113,7 +113,6 @@ export default function ResumePage() {
             </ul>
           </div>
 
-          {/* Job 2 */}
           <div className="space-y-3">
             <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2">
               <div>
@@ -142,7 +141,6 @@ export default function ResumePage() {
             </ul>
           </div>
 
-          {/* Job 3 */}
           <div className="space-y-3">
             <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2">
               <div>
@@ -163,7 +161,7 @@ export default function ResumePage() {
               </li>
             </ul>
           </div>
-        </section>
+        </section> */}
 
         {/* Education */}
         <section className="space-y-4">
