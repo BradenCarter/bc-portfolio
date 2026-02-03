@@ -6,6 +6,16 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-montserrat);
+  --color-brand-primary: #4F76F6;
+  --color-nav-bg: #021C3C;
+  --color-theme-color-dark-gray: #1F2B37;
+  --color-theme-color-blue: #0092F9;
+  --color-theme-color-light-gray: #F9F9F9;
+  --color-theme-color-mint: #77F2A1;
+  --color-heading: var(--heading);
+  --color-heading-dark: var(--heading-dark);
+  --color-body: var(--body);
+  --color-body-dark: var(--body-dark);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -45,6 +55,8 @@
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
+  --heading: #18181b;
+  --body: #3f3f46;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
@@ -79,6 +91,8 @@
 .dark {
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
+  --heading-dark: #fafafa;
+  --body-dark: #d4d4d8;
   --card: oklch(0.208 0.042 265.755);
   --card-foreground: oklch(0.984 0.003 247.858);
   --popover: oklch(0.208 0.042 265.755);
@@ -116,5 +130,20 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-gradient-theme {
+    background: linear-gradient(to top, var(--color-theme-color-blue), var(--color-theme-color-mint));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-theme-horizontal {
+    background: linear-gradient(to right, var(--color-theme-color-blue), var(--color-theme-color-mint));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }

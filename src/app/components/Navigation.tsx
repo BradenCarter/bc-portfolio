@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const navItems = [
   { href: '/', label: 'Home' },
@@ -25,12 +26,12 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black">
+    <nav className="border-b border-zinc-200 dark:border-zinc-800 bg-theme-color-dark-gray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Name */}
           <Link href="/" className="text-xl font-bold hover:opacity-70 transition-opacity">
-            BC
+            <Image src="/bc_logo_transparent.png" alt="Logo" width={40} height={40} className="h-[90%] w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -41,19 +42,19 @@ export default function Navigation() {
                 href={item.href}
                 className={`text-sm font-medium transition-colors ${
                   isActive(item.href)
-                    ? 'text-zinc-900 dark:text-zinc-100'
-                    : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100'
+                    ? 'text-theme-color-mint'
+                    : 'text-theme-color-light-gray hover:text-white'
                 }`}
               >
                 {item.label}
               </Link>
-            ))}
+            ))} 
           </div>
 
           {/* Mobile menu button */}
           <button
             type="button"
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 focus:outline-none"
+            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-zinc-300 hover:text-white focus:outline-none"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
           >
@@ -97,8 +98,8 @@ export default function Navigation() {
                 href={item.href}
                 className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                   isActive(item.href)
-                    ? 'bg-zinc-100 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100'
-                    : 'text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-900 hover:text-zinc-900 dark:hover:text-zinc-100'
+                    ? 'text-[#4F76F6]'
+                    : 'text-zinc-300 hover:text-white'
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >

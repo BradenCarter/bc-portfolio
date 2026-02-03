@@ -27,7 +27,7 @@ export default function TechStackBadge({ id }: TechStackBadgeProps) {
       aria-describedby={tech.icon && isHovered ? tooltipId : undefined}
       className="relative inline-flex items-center cursor-default focus:outline-none focus:ring-2 focus:ring-zinc-400 dark:focus:ring-zinc-600 rounded"
     >
-      <span className="text-sm px-1 py-1 flex-shrink-0" aria-hidden="true">
+      <span className="text-sm px-1 py-1 shrink-0 text-theme-color-light-gray" aria-hidden="true">
         {tech.icon || tech.name}
       </span>
       {tech.icon && isHovered && (

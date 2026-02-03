@@ -15,10 +15,10 @@ export default function ProjectsPage() {
   const otherProjects = projects.filter(p => !p.featured);
 
   return (
-    <main className="min-h-screen p-8 sm:p-20">
+    <main className="min-h-screen p-8 sm:p-20 bg-theme-color-dark-gray">
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold">Projects</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gradient-theme">Projects</h1>
           <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl">
             A selection of projects demonstrating my technical skills, architectural decisions, 
             and problem-solving approach.
@@ -28,7 +28,7 @@ export default function ProjectsPage() {
         {/* Featured Projects */}
         {featuredProjects.length > 0 && (
           <section className="space-y-6">
-            <h2 className="text-2xl font-semibold">Featured Projects</h2>
+            <h2 className="text-2xl font-semibold text-theme-color-blue">Featured Projects</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {featuredProjects.map((project) => (
                 <ProjectCard key={project.name} project={project} />
@@ -40,7 +40,7 @@ export default function ProjectsPage() {
         {/* Other Projects */}
         {otherProjects.length > 0 && (
           <section className="space-y-6">
-            <h2 className="text-2xl font-semibold">More Projects</h2>
+            <h2 className="text-2xl font-semibold text-theme-color-mint">More Projects</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {otherProjects.map((project) => (
                 <ProjectCard key={project.name} project={project} />

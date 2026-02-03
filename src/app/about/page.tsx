@@ -14,7 +14,7 @@ export default function AboutPage() {
         {/* Professional Summary */}
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Professional Summary</h2>
-          <div className="text-lg leading-relaxed space-y-4 text-zinc-700 dark:text-zinc-300">
+          <div className="text-lg leading-relaxed space-y-4 text-body dark:text-body-dark">
             <p>
               I design and implement tech solutions with a background in full-stack web development 
               for both small companies and enterprise-level organizations. My career has been driven 
@@ -32,7 +32,7 @@ export default function AboutPage() {
         {/* Problem-Solving Philosophy */}
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Problem-Solving Philosophy</h2>
-          <div className="text-lg leading-relaxed space-y-4 text-zinc-700 dark:text-zinc-300">
+          <div className="text-lg leading-relaxed space-y-4 text-body dark:text-body-dark">
             <p>
               I believe the best solutions come from deeply understanding the problem before jumping 
               to implementation. My approach combines:
@@ -51,21 +51,21 @@ export default function AboutPage() {
         {/* Domain Experience */}
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Domain Experience</h2>
-          <div className="text-lg leading-relaxed space-y-4 text-zinc-700 dark:text-zinc-300">
+          <div className="text-lg leading-relaxed space-y-4 text-body dark:text-body-dark">
             <p>
               My experience spans multiple domains:
             </p>
             <div className="space-y-3">
               <div>
-                <h3 className="font-semibold text-zinc-900 dark:text-zinc-100">Healthcare Systems</h3>
+                <h3 className="font-semibold text-heading dark:text-heading-dark">Healthcare Systems</h3>
                 <p>Built patient management systems and clinical workflows requiring high reliability and data security.</p>
               </div>
               <div>
-                <h3 className="font-semibold text-zinc-900 dark:text-zinc-100">Enterprise Applications</h3>
+                <h3 className="font-semibold text-heading dark:text-heading-dark">Enterprise Applications</h3>
                 <p>Developed and maintained large-scale business applications supporting thousands of users.</p>
               </div>
               <div>
-                <h3 className="font-semibold text-zinc-900 dark:text-zinc-100">SaaS Products</h3>
+                <h3 className="font-semibold text-heading dark:text-heading-dark">SaaS Products</h3>
                 <p>Created modern web applications with focus on performance, scalability, and user experience.</p>
               </div>
             </div>
@@ -75,7 +75,7 @@ export default function AboutPage() {
         {/* Personal Note */}
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Beyond Code</h2>
-          <p className="text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">
+          <p className="text-lg leading-relaxed text-body dark:text-body-dark">
             When I'm not coding, I enjoy exploring new technologies, contributing to open source, 
             and staying current with industry trends. I'm always looking for opportunities to learn 
             and grow as a developer.
