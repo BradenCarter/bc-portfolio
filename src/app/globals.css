@@ -57,9 +57,9 @@
 
 :root {
   --theme-dark-gray: #1F2B37;
-  --theme-blue: #0092F9;
-  --theme-light-gray: #9f9fa9;
   --theme-highlight-gray: #F9F9F9;
+  --theme-light-gray: #9f9fa9;
+  --theme-blue: #0092F9;
   --theme-mint: #77F2A1;
   --theme-purple: #A78BFA;
   --theme-orange: #FBA061;
@@ -149,7 +149,7 @@
     background-clip: text;
     color: transparent;
   }
-  li, h3 {
+  li, h3, h2 {
     color: var(--color-theme-color-highlight-gray);
   }
   p {

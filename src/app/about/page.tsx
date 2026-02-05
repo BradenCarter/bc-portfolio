@@ -75,7 +75,7 @@ export default function AboutPage() {
               {
                 title: "Cross‑Disciplinary Collaboration & Tooling Development",
                 description:
-                  "- Excel at bridging communication between technical and non‑technical teams, translating creative and production needs into development tools, workflows, and integration standards that streamline collaboration. This includes designing pipelines that help artists, designers, and engineers work in sync, reducing friction in asset integration and design processes while supporting more efficient, predictable production timelines.",
+                  "Excel at bridging communication between technical and non‑technical teams, translating creative and production needs into development tools, workflows, and integration standards that streamline collaboration. This includes designing pipelines that help artists, designers, and engineers work in sync, reducing friction in asset integration and design processes while supporting more efficient, predictable production timelines.",
                 color: "purple",
               },
               {

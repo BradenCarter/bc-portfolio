@@ -9,8 +9,30 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center p-8 bg-theme-color-dark-gray">
-      <div className="max-w-4xl mx-auto text-center space-y-8">
+    <main className="min-h-screen flex items-center justify-center p-8 bg-theme-color-dark-gray relative overflow-hidden">
+      {/* Tech grid background */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-0 bottom-0 w-full h-[40vh]"
+        style={{
+          zIndex: 0,
+        }}
+      >
+        <Image
+          src="/glowing_hexes.png"
+          alt="Tech Grid Background"
+          fill
+          sizes="100vw"
+          className="object-cover w-full h-full"
+            style={{
+              maskImage: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%)',
+              WebkitMaskImage: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%)',
+          }}
+        />
+      </div>
+
+
+      <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
         {/* Name + Title */}
         <div className="space-y-4">
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-theme-color-blue">
@@ -49,7 +71,9 @@ export default function Home() {
         alt="BC Logo"
         width={160}
         height={160}
-        className="absolute bottom-4 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:left-auto sm:right-6 sm:bottom-6 opacity-70 hover:opacity-100 transition-opacity w-12 h-12 sm:w-40 sm:h-40"
+        className="hidden sm:block absolute sm:w-40 sm:h-40 sm:bottom-6 sm:left-auto sm:right-6 sm:translate-x-0 opacity-70 hover:opacity-100 transition-opacity z-20"
+        priority
+        style={{ pointerEvents: 'none' }}
       />
     </main>
   );
