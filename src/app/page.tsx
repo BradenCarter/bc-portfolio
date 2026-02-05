@@ -17,7 +17,7 @@ export default function Home() {
             Braden Carter
           </h1>
           <p className="text-2xl md:text-3xl text-theme-color-mint">
-            Full-Stack Developer
+            Full-Stack Solutions Developer
           </p>
         </div>
 

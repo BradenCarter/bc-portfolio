@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import blogPosts from '../data/blog';
+import { GradientHeadings } from '../../components/GradientHeadings';
 
 function formatDate(dateString: string): string {
   const date = new Date(dateString);
@@ -39,10 +40,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   return (
     <main className="min-h-screen p-8 sm:p-20">
       <div className="max-w-3xl mx-auto space-y-8">
+        <GradientHeadings />
         {/* Back Link */}
         <Link
           href="/blog"
-          className="inline-flex items-center text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          className="inline-flex items-center text-theme-color-light-gray hover:text-theme-color-mint transition-colors"
         >
           ← Back to Blog
         </Link>
@@ -54,7 +56,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               {post.title}
             </h1>
             
-            <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-600 dark:text-zinc-400">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-theme-color-highlight-gray">
               <time dateTime={post.date} className="font-medium">
                 {formatDate(post.date)}
               </time>
@@ -73,7 +75,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               ))}
             </div>
 
-            <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed pt-4">
+            <p className="text-xl text-theme-color-highlight-gray leading-relaxed pt-4">
               {post.description}
             </p>
           </header>
@@ -125,10 +127,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
         {/* Navigation to other posts */}
         <div className="pt-8 border-t border-zinc-200 dark:border-zinc-800">
-          <Link
-            href="/blog"
-            className="inline-flex items-center text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors font-medium"
-          >
+        <Link
+          href="/blog"
+          className="inline-flex items-center text-theme-color-light-gray hover:text-theme-color-blue transition-colors"
+        >
             ← View all articles
           </Link>
         </div>

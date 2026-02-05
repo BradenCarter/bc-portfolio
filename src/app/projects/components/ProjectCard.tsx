@@ -7,7 +7,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         <article className="group relative p-0.5 rounded-lg border-2 border-[#A5A5A5] hover:border-transparent hover:bg-linear-to-r hover:from-theme-color-blue hover:to-theme-color-mint transition-all">
             <div className="p-6 rounded-md bg-theme-color-dark-gray min-h-[300px]">
                 <div className="space-y-4 pb-12"> 
-                    <h3 className="text-2xl font-semibold text-theme-color-light-gray">
+                    <h3 className="text-2xl font-semibold text-theme-color-highlight-gray">
                         <Link
                             href={`/projects/${project.url}`}
                             className="after:content-[''] after:absolute after:inset-0 after:rounded-lg text-theme-color-light-gray] group-hover:text-white transition-colors"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import ConditionalNav from "@/src/app/components/ConditionalNav";
+import { GradientHeadings } from "./components/GradientHeadings";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -21,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} antialiased`}
+        className={`${montserrat.variable} antialiased  bg-theme-color-dark-gray`}
       >
         <ConditionalNav />
         {children}

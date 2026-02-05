@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import blogPosts from './data/blog';
+import { GradientHeadings } from '../components/GradientHeadings';
 
 export const metadata: Metadata = {
   title: 'Blog | Braden Carter',
@@ -22,9 +23,11 @@ export default function BlogPage() {
   return (
     <main className="min-h-screen p-8 sm:p-20">
       <div className="max-w-4xl mx-auto space-y-12">
+                <GradientHeadings />
+        
         <div className="space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold">Blog</h1>
-          <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl">
+          <p className="text-xl max-w-3xl">
             Technical articles on software architecture, system design, performance optimization, 
             and lessons learned from building production systems.
           </p>
@@ -40,7 +43,7 @@ export default function BlogPage() {
                 <h2 className="text-2xl md:text-3xl font-semibold group-hover:text-zinc-600 dark:group-hover:text-zinc-400 transition-colors">
                   {post.title}
                 </h2>
-                <p className="text-lg text-zinc-700 dark:text-zinc-300">
+                <p className="text-lg">
                   {post.description}
                 </p>
                 <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-600 dark:text-zinc-400">
@@ -59,7 +62,7 @@ export default function BlogPage() {
                     ))}
                   </div>
                 </div>
-                <div className="pt-2 text-zinc-600 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors">
+                <div className="pt-2 text-theme-color-light-gray group-hover:text-theme-color-light-gray transition-colors">
                   Read article →
                 </div>
               </Link>

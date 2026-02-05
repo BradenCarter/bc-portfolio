@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getProjectById } from '../actions/inMemoryProjectService';
 import TechStackBadge from '../components/TechStackBadge';
 import { getTechStackItem } from '../data/techStackConfig';
+import { GradientHeadings } from '../../components/GradientHeadings';
 
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
@@ -32,19 +33,20 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
   return (
     <main className="min-h-screen p-8 sm:p-20">
+      <GradientHeadings />
       <div className="max-w-4xl mx-auto space-y-12">
         {/* Back Link */}
         <Link
           href="/projects"
-          className="inline-flex items-center text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          className="inline-flex items-center text-theme-color-light-gray hover:text-theme-color-mint transition-colors"
         >
           ← Back to Projects
         </Link>
 
         {/* Header */}
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold">{project.name}</h1>
-          <p className="text-xl text-zinc-600 dark:text-zinc-400">
+          <h1 className="text-4xl md:text-5xl font-bold pb-2">{project.name}</h1>
+          <p className="text-xl">
             {project.description}
           </p>
           <div className="flex flex-wrap gap-2">
@@ -62,7 +64,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         {/* Problem Statement */}
         <section className="space-y-3">
           <h2 className="text-2xl font-semibold">Problem</h2>
-          <p className="text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">
+          <p className="text-lg leading-relaxed ">
             {project.problem}
           </p>
         </section>
@@ -70,7 +72,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         {/* Solution Overview */}
         <section className="space-y-3">
           <h2 className="text-2xl font-semibold">Solution</h2>
-          <p className="text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">
+          <p className="text-lg leading-relaxed ">
             {project.solution}
           </p>
         </section>
@@ -78,10 +80,10 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         {/* Role & Ownership */}
         <section className="space-y-3">
           <h2 className="text-2xl font-semibold">Role & Ownership</h2>
-          <p className="text-lg font-medium text-zinc-800 dark:text-zinc-200">
+          <p className="text-lg font-medium  dark:">
             {project.role}
           </p>
-          <ul className="list-disc list-inside space-y-2 text-lg text-zinc-700 dark:text-zinc-300 ml-4">
+          <ul className="list-disc list-inside space-y-2 text-lg ml-4">
             {project.ownership.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -91,7 +93,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         {/* Architecture Decisions */}
         <section className="space-y-3">
           <h2 className="text-2xl font-semibold">Architecture</h2>
-          <ul className="list-disc list-inside space-y-2 text-lg text-zinc-700 dark:text-zinc-300 ml-4">
+          <ul className="list-disc list-inside space-y-2 text-lg ml-4">
             {project.architecture.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -104,10 +106,10 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           <div className="space-y-6">
             {project.challenges.map((item, index) => (
               <div key={index} className="space-y-2">
-                <h3 className="text-lg font-semibold text-zinc-800 dark:text-zinc-200">
+                <h3 className="text-lg font-semibold  dark:">
                   {item.challenge}
                 </h3>
-                <p className="text-lg text-zinc-700 dark:text-zinc-300">
+                <p className="text-lg  dark:">
                   {item.solution}
                 </p>
               </div>
@@ -118,7 +120,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         {/* Deployment & CI/CD */}
         <section className="space-y-3">
           <h2 className="text-2xl font-semibold">Deployment & CI/CD</h2>
-          <p className="text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">
+          <p className="text-lg leading-relaxed  dark:">
             {project.deployment}
           </p>
         </section>
@@ -126,7 +128,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         {/* Outcomes */}
         <section className="space-y-3">
           <h2 className="text-2xl font-semibold">Outcomes</h2>
-          <ul className="list-disc list-inside space-y-2 text-lg text-zinc-700 dark:text-zinc-300 ml-4">
+          <ul className="list-disc list-inside space-y-2 text-lg ml-4">
             {project.outcomes.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -136,7 +138,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         {/* Lessons Learned */}
         <section className="space-y-3">
           <h2 className="text-2xl font-semibold">Lessons Learned</h2>
-          <ul className="list-disc list-inside space-y-2 text-lg text-zinc-700 dark:text-zinc-300 ml-4">
+          <ul className="list-disc list-inside space-y-2 text-lg ml-4">
             {project.lessons.map((item, index) => (
               <li key={index}>{item}</li>
             ))}

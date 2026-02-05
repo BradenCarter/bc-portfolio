@@ -1,30 +1,24 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
+import type { ReactNode } from 'react';
+import ButtonFoundation from '@/components/ui/ButtonFoundation';
 
 interface DownloadResumeButtonProps {
   onClick?: () => void;
+  children?: ReactNode;
+  variant?: 'gradient' | 'outline';
   className?: string;
-  children?: React.ReactNode;
-  variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
-  size?: 'default' | 'sm' | 'lg' | 'icon' | 'icon-sm' | 'icon-lg';
 }
 
-export default function DownloadResumeButton({ 
+export default function DownloadResumeButton({
   onClick = () => window.print(),
-  className = "print:hidden",
   children = "Download Résumé (PDF)",
-  variant = "default",
-  size = "default"
+  variant = "gradient",
+  className = '',
 }: DownloadResumeButtonProps) {
   return (
-    <Button
-      onClick={onClick}
-      className={className}
-      variant={variant}
-      size={size}
-    >
+    <ButtonFoundation onClick={onClick} variant={variant} className={className}>
       {children}
-    </Button>
+    </ButtonFoundation>
   );
 }

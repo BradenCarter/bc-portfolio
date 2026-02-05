@@ -8,10 +8,14 @@
   --font-sans: var(--font-montserrat);
   --color-brand-primary: #4F76F6;
   --color-nav-bg: #021C3C;
-  --color-theme-color-dark-gray: #1F2B37;
-  --color-theme-color-blue: #0092F9;
-  --color-theme-color-light-gray: #F9F9F9;
-  --color-theme-color-mint: #77F2A1;
+  --color-theme-color-dark-gray: var(--theme-dark-gray);
+  --color-theme-color-blue: var(--theme-blue);
+  --color-theme-color-light-gray: var(--theme-light-gray);
+  --color-theme-color-highlight-gray: var(--theme-highlight-gray);
+  --color-theme-color-mint: var(--theme-mint);
+  --color-theme-color-purple: var(--theme-purple);
+  --color-theme-color-orange: var(--theme-orange);
+  --color-theme-color-pink: var(--theme-pink);
   --color-heading: var(--heading);
   --color-heading-dark: var(--heading-dark);
   --color-body: var(--body);
@@ -52,6 +56,14 @@
 }
 
 :root {
+  --theme-dark-gray: #1F2B37;
+  --theme-blue: #0092F9;
+  --theme-light-gray: #9f9fa9;
+  --theme-highlight-gray: #F9F9F9;
+  --theme-mint: #77F2A1;
+  --theme-purple: #A78BFA;
+  --theme-orange: #FBA061;
+  --theme-pink: #F38DC0;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
@@ -131,6 +143,19 @@
   body {
     @apply bg-background text-foreground;
   }
+  h1 {
+    background: linear-gradient(to top, var(--color-theme-color-blue), var(--color-theme-color-mint));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  li, h3 {
+    color: var(--color-theme-color-highlight-gray);
+  }
+  p {
+    color: #9f9fa9;
+  }
+  
 }
 
 @layer utilities {

@@ -15,11 +15,11 @@ export default function ProjectsPage() {
   const otherProjects = projects.filter(p => !p.featured);
 
   return (
-    <main className="min-h-screen p-8 sm:p-20 bg-theme-color-dark-gray">
+    <main className="min-h-screen p-8 sm:p-20">
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-gradient-theme">Projects</h1>
-          <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl">
+          <h1 className="text-4xl md:text-5xl font-bold pb-2">Projects</h1>
+          <p className="text-xl  max-w-3xl">
             A selection of projects demonstrating my technical skills, architectural decisions, 
             and problem-solving approach.
           </p>

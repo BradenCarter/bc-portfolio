@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { EnvelopeClosedIcon, LinkedInLogoIcon, GitHubLogoIcon, ClockIcon } from '@radix-ui/react-icons';
-import { Button } from '@/components/ui/button';
+import ButtonFoundation from '@/components/ui/ButtonFoundation';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
@@ -49,7 +49,7 @@ export default function ContactPage() {
       <div className="max-w-4xl mx-auto space-y-12">
         <div className="space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold">Get in Touch</h1>
-          <p className="text-xl text-zinc-600 dark:text-zinc-400">
+          <p className="text-xl max-w-3xl">
             Interested in working together? Feel free to reach out.
           </p>
         </div>
@@ -57,14 +57,14 @@ export default function ContactPage() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-6">
-            <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-theme-color-blue">Contact Information</h2>
             
             <div className="space-y-6">
               {/* Email */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 dark:bg-primary/20 flex items-center justify-center">
-                    <EnvelopeClosedIcon className="w-6 h-6 text-primary" />
+                    <EnvelopeClosedIcon className="w-6 h-6 text-primary" color='white' />
                   </div>
                 </div>
                 <div className="flex-1">
@@ -80,9 +80,9 @@ export default function ContactPage() {
 
               {/* LinkedIn */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 dark:bg-primary/20 flex items-center justify-center">
-                    <LinkedInLogoIcon className="w-6 h-6 text-primary" />
+                    <LinkedInLogoIcon className="w-6 h-6 text-primary" color='white' />
                   </div>
                 </div>
                 <div className="flex-1">
@@ -100,9 +100,9 @@ export default function ContactPage() {
 
               {/* GitHub */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 dark:bg-primary/20 flex items-center justify-center">
-                    <GitHubLogoIcon className="w-6 h-6 text-primary" />
+                    <GitHubLogoIcon className="w-6 h-6 text-primary" color='white' />
                   </div>
                 </div>
                 <div className="flex-1">
@@ -120,9 +120,9 @@ export default function ContactPage() {
 
               {/* Response Time */}
               <div className="flex gap-4 pt-4">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 dark:bg-primary/20 flex items-center justify-center">
-                    <ClockIcon className="w-6 h-6 text-primary" />
+                    <ClockIcon className="w-6 h-6 text-primary" color='white' />
                   </div>
                 </div>
                 <div className="flex-1">
@@ -139,7 +139,7 @@ export default function ContactPage() {
           <div>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div className="space-y-2">
-                <Label htmlFor="name">Name</Label>
+                <Label htmlFor="name" className='text-theme-color-mint'>Name</Label>
                 <Input
                   type="text"
                   id="name"
@@ -152,7 +152,7 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email" className='text-theme-color-mint'>Email</Label>
                 <Input
                   type="email"
                   id="email"
@@ -165,7 +165,7 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="subject">Subject</Label>
+                <Label htmlFor="subject" className='text-theme-color-mint'>Subject</Label>
                 <Input
                   type="text"
                   id="subject"
@@ -178,7 +178,7 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message">Message</Label>
+                <Label htmlFor="message" className='text-theme-color-mint'>Message</Label>
                 <Textarea
                   id="message"
                   rows={6}
@@ -191,13 +191,13 @@ export default function ContactPage() {
                 )}
               </div>
 
-              <Button
+              <ButtonFoundation
                 type="submit"
                 disabled={formState === 'submitting'}
                 className="w-full"
               >
                 {formState === 'submitting' ? 'Sending...' : 'Send Message'}
-              </Button>
+              </ButtonFoundation>
 
               {formState === 'success' && (
                 <p className="text-green-600 dark:text-green-400 text-center">

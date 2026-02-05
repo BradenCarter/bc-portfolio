@@ -26,7 +26,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="border-b border-zinc-200 dark:border-zinc-800 bg-theme-color-dark-gray">
+    <nav className="sticky top-0 z-50 border-b border-zinc-200 dark:border-zinc-800 bg-theme-color-dark-gray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Name */}
